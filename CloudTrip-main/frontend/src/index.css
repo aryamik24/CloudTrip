@@ -1,0 +1,209 @@
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --ink: #1c2834;
+  --muted: #5b6b7c;
+  --line: #d7e0ea;
+  --primary: #1a6fb5;
+  --primary-dark: #145a94;
+  --success: #1f7a4d;
+  --success-bg: #e6f6ec;
+  --error: #b42318;
+  --error-bg: #fdecea;
+  --edit: #1a6fb5;
+  --delete: #c0392b;
+  --generate: #1f7a4d;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+header h1 {
+  margin: 0 0 16px;
+  font-size: 1.75rem;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+
+nav button {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 10px 14px;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+nav button.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  font-weight: 600;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  border: 1px solid transparent;
+}
+
+.banner-success {
+  background: var(--success-bg);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.banner-error {
+  background: var(--error-bg);
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.banner-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.record-form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.btn-edit {
+  background: var(--edit);
+  border-color: var(--edit);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 5px 8px;
+}
+
+.btn-delete {
+  background: var(--delete);
+  border-color: var(--delete);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 5px 8px;
+}
+
+.btn-generate {
+  background: var(--generate);
+  border-color: var(--generate);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 5px 8px;
+}
+
+.table-wrap {
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+tbody tr:nth-child(even) {
+  background: #f7fafc;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  white-space: nowrap;
+}
+
+.empty,
+.muted {
+  color: var(--muted);
+  margin-top: 16px;
+}
